@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="InfoOptionsViewController">
@@ -29,6 +29,7 @@
                 <outlet property="fRatioPopUp" destination="9" id="74"/>
                 <outlet property="fRemoveSeedingCompleteCheck" destination="113" id="118"/>
                 <outlet property="fSeedingLimitsSectionLabel" destination="21" id="122"/>
+                <outlet property="fSequentialCheck" destination="5Qy-Dv-ahP" id="5dC-YM-yQs"/>
                 <outlet property="fTransferBandwidthSectionLabel" destination="20" id="125"/>
                 <outlet property="fUploadLimitCheck" destination="8" id="67"/>
                 <outlet property="fUploadLimitField" destination="19" id="71"/>
@@ -39,11 +40,11 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="2" userLabel="Options">
-            <rect key="frame" x="0.0" y="0.0" width="512" height="275"/>
+            <rect key="frame" x="0.0" y="0.0" width="512" height="298"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
             <subviews>
                 <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3">
-                    <rect key="frame" x="160" y="225" width="110" height="17"/>
+                    <rect key="frame" x="160" y="248" width="110" height="17"/>
                     <popUpButtonCell key="cell" type="roundRect" title="Нормальный" bezelStyle="roundedRect" alignment="left" controlSize="small" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="1" imageScaling="proportionallyDown" inset="2" selectedItem="51" id="48">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="smallSystem"/>
@@ -60,7 +61,7 @@
                     </connections>
                 </popUpButton>
                 <button translatesAutoresizingMaskIntoConstraints="NO" id="7">
-                    <rect key="frame" x="9" y="182" width="210" height="18"/>
+                    <rect key="frame" x="9" y="205" width="210" height="18"/>
                     <buttonCell key="cell" type="check" title="Ограничить скорость скачивания:" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" allowsMixedState="YES" inset="2" id="44">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="smallSystem"/>
@@ -70,7 +71,7 @@
                     </connections>
                 </button>
                 <button translatesAutoresizingMaskIntoConstraints="NO" id="6">
-                    <rect key="frame" x="9" y="139" width="267" height="18"/>
+                    <rect key="frame" x="9" y="162" width="267" height="18"/>
                     <buttonCell key="cell" type="check" title="Не превышать общее ограничение скорости" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" allowsMixedState="YES" inset="2" id="45">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="smallSystem"/>
@@ -80,7 +81,7 @@
                     </connections>
                 </button>
                 <button translatesAutoresizingMaskIntoConstraints="NO" id="113">
-                    <rect key="frame" x="9" y="53" width="318" height="18"/>
+                    <rect key="frame" x="9" y="76" width="318" height="18"/>
                     <buttonCell key="cell" type="check" title="Удалить из списка раздач после завершения раздачи" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" allowsMixedState="YES" inset="2" id="114">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="smallSystem"/>
@@ -90,7 +91,7 @@
                     </connections>
                 </button>
                 <button translatesAutoresizingMaskIntoConstraints="NO" id="8">
-                    <rect key="frame" x="9" y="160" width="191" height="18"/>
+                    <rect key="frame" x="9" y="183" width="191" height="18"/>
                     <buttonCell key="cell" type="check" title="Ограничить скорость раздачи:" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" allowsMixedState="YES" inset="2" id="43">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="smallSystem"/>
@@ -100,7 +101,7 @@
                     </connections>
                 </button>
                 <textField verticalHuggingPriority="750" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="11" customClass="ColorTextField">
-                    <rect key="frame" x="210" y="12" width="86" height="14"/>
+                    <rect key="frame" x="210" y="35" width="86" height="14"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="пользователей" id="35">
                         <font key="font" metaFont="smallSystem"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -108,7 +109,7 @@
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="12">
-                    <rect key="frame" x="159" y="9" width="45" height="19"/>
+                    <rect key="frame" x="159" y="32" width="45" height="19"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="45" id="HJD-aQ-8Ww"/>
                     </constraints>
@@ -129,7 +130,7 @@
                     </connections>
                 </textField>
                 <textField verticalHuggingPriority="750" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="13">
-                    <rect key="frame" x="10" y="12" width="143" height="14"/>
+                    <rect key="frame" x="10" y="35" width="143" height="14"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Максимум подключений:" id="32">
                         <font key="font" metaFont="smallSystem"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -137,7 +138,7 @@
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="14">
-                    <rect key="frame" x="10" y="34" width="95" height="14"/>
+                    <rect key="frame" x="10" y="57" width="95" height="14"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Дополнительно" id="31">
                         <font key="font" metaFont="smallSystemBold"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -145,7 +146,7 @@
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="4">
-                    <rect key="frame" x="10" y="227" width="144" height="14"/>
+                    <rect key="frame" x="10" y="250" width="144" height="14"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Приоритет всей раздачи:" id="47">
                         <font key="font" metaFont="smallSystem"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -153,7 +154,7 @@
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="15">
-                    <rect key="frame" x="10" y="98" width="82" height="14"/>
+                    <rect key="frame" x="10" y="121" width="82" height="14"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Для рейтинга:" id="30">
                         <font key="font" metaFont="smallSystem"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -161,7 +162,7 @@
                     </textFieldCell>
                 </textField>
                 <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9">
-                    <rect key="frame" x="101" y="96" width="309" height="17"/>
+                    <rect key="frame" x="101" y="119" width="309" height="17"/>
                     <popUpButtonCell key="cell" type="roundRect" title="Общие настройки" bezelStyle="roundedRect" alignment="left" controlSize="small" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" preferredEdge="maxY" selectedItem="41" id="38">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="smallSystem"/>
@@ -178,7 +179,7 @@
                     </connections>
                 </popUpButton>
                 <textField verticalHuggingPriority="750" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="16" customClass="ColorTextField">
-                    <rect key="frame" x="276" y="184" width="29" height="14"/>
+                    <rect key="frame" x="276" y="207" width="29" height="14"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="КБ/с" id="29">
                         <font key="font" metaFont="smallSystem"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -186,7 +187,7 @@
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="97">
-                    <rect key="frame" x="469" y="76" width="26" height="14"/>
+                    <rect key="frame" x="469" y="99" width="26" height="14"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="мин" id="98">
                         <font key="font" metaFont="smallSystem"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -194,7 +195,7 @@
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="107">
-                    <rect key="frame" x="416" y="76" width="86" height="14"/>
+                    <rect key="frame" x="416" y="99" width="86" height="14"/>
                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="global info here" id="108">
                         <font key="font" metaFont="smallSystem"/>
                         <color key="textColor" white="0.41999999999999998" alpha="1" colorSpace="calibratedWhite"/>
@@ -202,7 +203,7 @@
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="109">
-                    <rect key="frame" x="416" y="98" width="86" height="14"/>
+                    <rect key="frame" x="416" y="121" width="86" height="14"/>
                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="global info here" id="110">
                         <font key="font" metaFont="smallSystem"/>
                         <color key="textColor" white="0.41999999999999998" alpha="1" colorSpace="calibratedWhite"/>
@@ -210,7 +211,7 @@
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="17">
-                    <rect key="frame" x="225" y="181" width="45" height="19"/>
+                    <rect key="frame" x="225" y="204" width="45" height="19"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="45" id="4cj-ea-96w"/>
                     </constraints>
@@ -231,7 +232,7 @@
                     </connections>
                 </textField>
                 <textField verticalHuggingPriority="750" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="18" customClass="ColorTextField">
-                    <rect key="frame" x="276" y="162" width="29" height="14"/>
+                    <rect key="frame" x="276" y="185" width="29" height="14"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="КБ/с" id="26">
                         <font key="font" metaFont="smallSystem"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -239,7 +240,7 @@
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="19">
-                    <rect key="frame" x="225" y="159" width="45" height="19"/>
+                    <rect key="frame" x="225" y="182" width="45" height="19"/>
                     <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" drawsBackground="YES" id="24">
                         <numberFormatter key="formatter" formatterBehavior="custom10_4" allowsFloats="NO" usesGroupingSeparator="NO" groupingSize="0" minimumIntegerDigits="1" maximumIntegerDigits="42" id="25">
                             <nil key="negativeInfinitySymbol"/>
@@ -257,7 +258,7 @@
                     </connections>
                 </textField>
                 <textField verticalHuggingPriority="750" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="5">
-                    <rect key="frame" x="10" y="249" width="67" height="14"/>
+                    <rect key="frame" x="10" y="272" width="67" height="14"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Приоритет" id="46">
                         <font key="font" metaFont="smallSystemBold"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -265,7 +266,7 @@
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="20">
-                    <rect key="frame" x="10" y="205" width="95" height="14"/>
+                    <rect key="frame" x="10" y="228" width="95" height="14"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Ширина канала" id="23">
                         <font key="font" metaFont="smallSystemBold"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -273,7 +274,7 @@
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="21">
-                    <rect key="frame" x="10" y="120" width="133" height="14"/>
+                    <rect key="frame" x="10" y="143" width="133" height="14"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Ограничения раздачи" id="22">
                         <font key="font" metaFont="smallSystemBold"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -281,7 +282,7 @@
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="10">
-                    <rect key="frame" x="418" y="95" width="45" height="19"/>
+                    <rect key="frame" x="418" y="118" width="45" height="19"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="45" id="T2I-PK-5JP"/>
                     </constraints>
@@ -302,7 +303,7 @@
                     </connections>
                 </textField>
                 <textField verticalHuggingPriority="750" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="79">
-                    <rect key="frame" x="10" y="76" width="85" height="14"/>
+                    <rect key="frame" x="10" y="99" width="85" height="14"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Неактивности:" id="89">
                         <font key="font" metaFont="smallSystem"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -310,7 +311,7 @@
                     </textFieldCell>
                 </textField>
                 <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="80">
-                    <rect key="frame" x="101" y="74" width="309" height="17"/>
+                    <rect key="frame" x="101" y="97" width="309" height="17"/>
                     <popUpButtonCell key="cell" type="roundRect" title="Общие настройки" bezelStyle="roundedRect" alignment="left" controlSize="small" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" preferredEdge="maxY" selectedItem="87" id="84">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="smallSystem"/>
@@ -327,7 +328,7 @@
                     </connections>
                 </popUpButton>
                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="81">
-                    <rect key="frame" x="418" y="73" width="45" height="19"/>
+                    <rect key="frame" x="418" y="96" width="45" height="19"/>
                     <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" drawsBackground="YES" id="82">
                         <numberFormatter key="formatter" formatterBehavior="default10_4" usesGroupingSeparator="NO" groupingSize="0" minimumIntegerDigits="0" maximumIntegerDigits="42" id="83">
                             <real key="minimum" value="1"/>
@@ -342,6 +343,16 @@
                         <outlet property="delegate" destination="-2" id="90"/>
                     </connections>
                 </textField>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="5Qy-Dv-ahP">
+                    <rect key="frame" x="9" y="12" width="176" height="18"/>
+                    <buttonCell key="cell" type="check" title="Последовательная загрузка" bezelStyle="regularSquare" imagePosition="left" controlSize="small" state="on" inset="2" id="xHG-vI-1Q3">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="setSequential:" target="-2" id="19L-Gb-TBZ"/>
+                    </connections>
+                </button>
             </subviews>
             <constraints>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="109" secondAttribute="trailing" constant="12" id="0WO-sN-JwZ"/>
@@ -369,6 +380,7 @@
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="97" secondAttribute="trailing" constant="12" id="AfJ-qR-Vmx"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="107" secondAttribute="trailing" constant="12" id="BV3-9n-m6O"/>
                 <constraint firstItem="3" firstAttribute="leading" secondItem="4" secondAttribute="trailing" constant="8" symbolic="YES" id="EDX-vF-rMR"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5Qy-Dv-ahP" secondAttribute="trailing" constant="12" id="ERb-6V-wMa"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="21" secondAttribute="trailing" constant="12" id="HCB-qi-fuj"/>
                 <constraint firstItem="79" firstAttribute="top" relation="greaterThanOrEqual" secondItem="15" secondAttribute="bottom" constant="8" symbolic="YES" id="HHF-Vx-w6p"/>
                 <constraint firstItem="18" firstAttribute="baseline" secondItem="19" secondAttribute="baseline" id="I18-q1-7U1"/>
@@ -378,7 +390,6 @@
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="11" secondAttribute="trailing" constant="12" id="Pc4-Po-5kw"/>
                 <constraint firstItem="97" firstAttribute="leading" secondItem="81" secondAttribute="trailing" constant="8" symbolic="YES" id="QFt-x4-MD1"/>
                 <constraint firstItem="11" firstAttribute="baseline" secondItem="12" secondAttribute="baseline" id="QfY-87-zkB"/>
-                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="13" secondAttribute="bottom" constant="12" id="Qlb-2v-jl3"/>
                 <constraint firstItem="79" firstAttribute="top" secondItem="15" secondAttribute="bottom" priority="249" constant="8" symbolic="YES" id="Qtv-Gr-qbT"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="18" secondAttribute="trailing" constant="12" id="RO0-vY-vMl"/>
                 <constraint firstItem="80" firstAttribute="baseline" secondItem="79" secondAttribute="baseline" id="Sn0-gT-Jlv"/>
@@ -390,8 +401,8 @@
                 <constraint firstItem="107" firstAttribute="leading" secondItem="80" secondAttribute="trailing" constant="8" symbolic="YES" id="W3J-QQ-WkF"/>
                 <constraint firstItem="17" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7" secondAttribute="trailing" constant="8" symbolic="YES" id="YZg-3l-eD1"/>
                 <constraint firstItem="20" firstAttribute="leading" secondItem="5" secondAttribute="leading" id="Yox-eX-ene"/>
-                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="12" secondAttribute="bottom" constant="4" id="ZTp-cT-y4R"/>
                 <constraint firstItem="6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="8" secondAttribute="bottom" constant="6" symbolic="YES" id="ZVz-jm-gBQ"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="5Qy-Dv-ahP" secondAttribute="bottom" constant="12" id="a59-d7-8q6"/>
                 <constraint firstItem="80" firstAttribute="width" secondItem="9" secondAttribute="width" id="aO0-Ae-sra"/>
                 <constraint firstItem="21" firstAttribute="top" secondItem="6" secondAttribute="bottom" constant="8" symbolic="YES" id="anI-Ug-PZi"/>
                 <constraint firstItem="10" firstAttribute="leading" secondItem="9" secondAttribute="trailing" constant="8" symbolic="YES" id="apm-Bw-2jg"/>
@@ -420,12 +431,15 @@
                 <constraint firstItem="12" firstAttribute="baseline" secondItem="13" secondAttribute="baseline" id="lLp-v3-jgi"/>
                 <constraint firstItem="7" firstAttribute="top" secondItem="20" secondAttribute="bottom" constant="8" symbolic="YES" id="m7z-Uk-TU4"/>
                 <constraint firstItem="113" firstAttribute="top" secondItem="79" secondAttribute="bottom" constant="8" symbolic="YES" id="mO3-en-S0u"/>
+                <constraint firstItem="5Qy-Dv-ahP" firstAttribute="leading" secondItem="14" secondAttribute="leading" id="o3B-Fh-kGl"/>
+                <constraint firstItem="5Qy-Dv-ahP" firstAttribute="top" relation="greaterThanOrEqual" secondItem="12" secondAttribute="bottom" constant="5" id="q0Q-OP-UbJ"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="113" secondAttribute="trailing" constant="12" id="qME-5z-244"/>
                 <constraint firstItem="81" firstAttribute="leading" secondItem="10" secondAttribute="leading" id="qv5-EV-mki"/>
                 <constraint firstItem="109" firstAttribute="baseline" secondItem="9" secondAttribute="baseline" id="s3h-Kk-Yb9"/>
                 <constraint firstItem="81" firstAttribute="top" relation="greaterThanOrEqual" secondItem="10" secondAttribute="bottom" constant="3" id="t5b-Lg-aod"/>
                 <constraint firstItem="11" firstAttribute="leading" secondItem="12" secondAttribute="trailing" constant="8" symbolic="YES" id="uBx-f8-mlT"/>
                 <constraint firstItem="12" firstAttribute="leading" secondItem="13" secondAttribute="trailing" constant="8" symbolic="YES" id="v3y-zw-1Ky"/>
+                <constraint firstItem="5Qy-Dv-ahP" firstAttribute="top" secondItem="13" secondAttribute="bottom" constant="8" symbolic="YES" id="vdb-wm-c6f"/>
                 <constraint firstItem="15" firstAttribute="leading" secondItem="21" secondAttribute="leading" id="wFF-5Z-YAl"/>
                 <constraint firstItem="113" firstAttribute="leading" secondItem="21" secondAttribute="leading" id="xGa-do-bdn"/>
                 <constraint firstItem="97" firstAttribute="baseline" secondItem="81" secondAttribute="baseline" id="xkx-Kn-YcT"/>
@@ -433,7 +447,7 @@
                 <constraint firstItem="19" firstAttribute="width" secondItem="17" secondAttribute="width" id="zVz-nR-2yi"/>
                 <constraint firstItem="80" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="79" secondAttribute="trailing" constant="8" symbolic="YES" id="zbu-Bg-gpt"/>
             </constraints>
-            <point key="canvasLocation" x="-36.5" y="-35"/>
+            <point key="canvasLocation" x="-37" y="-35.5"/>
         </customView>
     </objects>
     <resources>
